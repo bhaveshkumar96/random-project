@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import CallToActionWithIllustration, { Home, Illustration } from './Components/Home';
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <h1>App</h1>
+      <Navbar/>
+      <CallToActionWithIllustration/>
     </div>
   );
 }
