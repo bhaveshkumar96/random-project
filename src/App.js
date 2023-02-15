@@ -1,3 +1,4 @@
+import Contact from './Components/Contact';
 import CallToActionWithIllustration, { Home, Illustration } from './Components/Home';
 import Navbar from './Components/Navbar';
 
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <CallToActionWithIllustration/>
+      <Contact/>
     </div>
   );
 }

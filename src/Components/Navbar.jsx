@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import {
   Box,
   Flex,
@@ -30,7 +29,7 @@ const NavLink = ({ children }) => (
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
     }}
-    href={'#'}>
+    >
     {children}
   </Link>
 );
@@ -40,7 +39,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4} style={{position:"sticky",top:"0"}}>
+      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4} style={{position:"sticky",top:"0",zIndex:"9"}}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -67,9 +66,20 @@ export default function Navbar() {
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+             
+                <NavLink>
+                  <Link href='/skills'>Skills</Link>
+                
+                </NavLink>
+                <NavLink>
+                  <Link>Projects </Link>
+                
+                </NavLink>
+                <NavLink >
+                  <Link>Contact</Link>
+                
+                </NavLink>
+             
             </Stack>
           </Box>
         ) : null}
